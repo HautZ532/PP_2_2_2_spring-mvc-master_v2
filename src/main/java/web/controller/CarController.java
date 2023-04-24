@@ -11,7 +11,7 @@ import java.util.List;
 @Controller
 public class CarController {
     @GetMapping(value = "/cars")
-    public String printCar(ModelMap model){
+    public String printCar(@RequestParam(value = "count", defaultValue = "5") ModelMap model) {
         List<String> messages = new ArrayList<>();
         messages.add("Car1");
         messages.add("Car1");
